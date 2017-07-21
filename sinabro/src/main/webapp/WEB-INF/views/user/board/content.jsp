@@ -19,7 +19,7 @@
 </head>
 <body>
 	<div align="center" class="body">
-		<form method="post" name="writeProc">
+		<form  name="writeForm">
 			<input type="hidden" name="num" value="${vo.num }" />
 		</form>
 		<center>
@@ -49,10 +49,12 @@
 					<td align="center">내용</td>
 					<td colspan="7" align="left" height="100"><pre>${vo.content}</pre></td>
 				</tr>
-			</table><br/>
-			<input type="button" value="글수정" onclick="window.location='updateForm.do?num=${vo.num}'"/>
-			<input type="button" value="글삭제" onclick="window.location='deleteForm.do?num=${vo.num}'"/>
-			<input type="button" value="목록보기" onclick="window.location='list.do'"/>
+			</table>
+			<br /> <input type="button" value="글수정"
+				onclick="window.location='updateForm.do?num=${vo.num}'" /> <input
+				type="button" value="글삭제"
+				onclick="window.location='deleteForm.do?num=${vo.num}'" /> <input
+				type="button" value="목록보기" onclick="window.location='list.do'" />
 		</center>
 	</div>
 	<!-- 댓글 입력 폼 -->

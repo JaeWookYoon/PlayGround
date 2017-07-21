@@ -12,7 +12,7 @@
 </head>
 <body>
 <div align="center" class="body">
-<form method="post" name="writeForm" action="writeProc.do" enctype="multipart.form-data">
+<form method="post" name="writeForm" action="writeForm.do" enctype="multipart.form-data">
 글쓰기
 <table width=450 border=1>
 <tr>

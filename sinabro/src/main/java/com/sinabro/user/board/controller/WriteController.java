@@ -28,7 +28,7 @@ public class WriteController {
       return "/board/writeForm";
    }
 
-   @RequestMapping(value="writeProc.do",method = RequestMethod.POST)
+   @RequestMapping(value="writeForm.do",method = RequestMethod.POST)
    public ModelAndView onSubmit(HttpServletRequest request, BoardVO boardVo, BindingResult bindingResult)throws Exception{
       // 글쓰기 DB에 저장
       SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
