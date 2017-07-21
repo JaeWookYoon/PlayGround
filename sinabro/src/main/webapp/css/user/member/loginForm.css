@@ -1,0 +1,80 @@
+@charset "UTF-8";
+
+#wrap {
+	clear: both;
+	margin-right: auto;
+	margin-left: auto;;
+	padding-top: 15%;
+	padding-bottom: 20%;
+	font-family: Calibri;
+	position:relative;
+}
+p{
+	color:#000000;
+	font-weight:bold;
+}
+hr {
+	height: 0.1px;
+	color: #A6A6A6;
+}
+
+th {
+	font-size: 13px;
+	color: #5D5D5D;
+	font-weight:bold;
+}
+
+#logTotalForm {
+	padding-top: 4%;
+	padding-bottom: 4%;
+	float:center;
+	margin-left: auto;
+	margin-right: auto;	
+}
+
+#logForm {
+	margin : auto
+}
+
+#id {
+	width: 87%;
+}
+
+#password {
+	width: 87%;
+}
+
+#bt {
+	border-radius: 1px;
+	border: none;
+	width: 128%;
+	height:47px;
+	text-align: center;
+	background-color: #A6A6A6;
+	float: right;
+	font-size: 13px;
+	color: #ffffff;
+}
+
+a {
+	text-decoration: none;
+}
+
+#findForm {
+	margin-top: auto;
+	margin-bottom: 5%;
+	margin-left: auto;
+	margin-right: auto;
+	width: 30%;
+	width: 20.5%;
+	margin-right: auto;
+}
+
+#join1, #join2 {
+	background-color:#A6A6A6;
+	color:#ffffff;
+	font-size:11px;
+}
+a{
+	color:#ffffff;
+}
