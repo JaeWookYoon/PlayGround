@@ -19,13 +19,13 @@ public class GetArticleController {
 		this.getArticleService = getArticleService;
 	}
 	
-	@RequestMapping(value="writeForm.do", method=RequestMethod.POST)
+	@RequestMapping(value="content.do", method=RequestMethod.POST)
 	public ModelAndView getArticle(Integer num){
 		BoardVO boardVo = this.getArticleService.getArticle(num);
 		Map<String,Object> model = new HashMap<String,Object>();
 		model.put("vo",boardVo);
 		ModelAndView mav=new ModelAndView();
-		mav.setViewName("board/content");
+		mav.setViewName("/board/content");
 		mav.addAllObjects(model);
 		return mav;
 	}
