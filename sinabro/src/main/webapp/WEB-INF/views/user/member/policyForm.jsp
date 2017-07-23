@@ -5,6 +5,8 @@
 <head>
 <link rel="stylesheet" href="/sinabro/css/user/member/policyForm.css">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script src="/sinabro/js/jquery-3.2.1.min.js"></script>
+<script src="sinabro/js/user/member/regForm.js"></script>
 <title>policyForm</title>
 </head>
 <body>
@@ -516,21 +518,21 @@ TRUSTSEOUL (이하 “회사”라 함)는 정보통신망이용촉진및정보�
             <div id="chkwrap">
                 
                 <div class="all-chk">
-                    <label><input type="checkbox" name="every_agree" id="every_agree" value="all" class="input-cbox new_every_agree" /> 전체동의</label>
+                    <label><input type="checkbox" name="every_agree" id="every_agree" value="all" class="input-cbox new_every_agree" onclick="checkedAll()" /> 전체동의</label>
                     <input type="hidden" name="allnew_agree" id="allnew_agree" value="Y">
                 </div>
                 
                 <div class="cont p10">
                     <ul>
                         <li class="ml-30 pt-10">
-                            <label><input type="checkbox" name="yaok2" id="yaok2" value="Y" class="input-cbox every_agree" /> 이용약관</label> <a href="#chk_cont1">내용보기</a>
+                            <label><input type="checkbox" name="yaok2" id="yaok2" value="Y" class="input-cbox every_agree"/> 이용약관</label> <a href="#chk_cont1">내용보기</a>
                         </li>
                                         <li class="ml-30 pt-10">
-                    <label><input type="checkbox" name="privacy1" id="privacy1" value="agree_uidB" class="input-cbox every_agree" /> 개인정보 수집 및 이용 안내</label> <a href="#chk_cont2">내용보기</a>
+                    <label><input type="checkbox" name="yaok2" id="privacy1" value="agree_uidB" class="input-cbox every_agree" /> 개인정보 수집 및 이용 안내</label> <a href="#chk_cont2">내용보기</a>
                 </li>
                         
                                         <li class="ml-30 pt-10">
-                    <label><input type="checkbox" name="privacy3" id="privacy3" value="agree_uidD" class="input-cbox every_agree" /> 개인정보 처리위탁</label> <a href="#chk_cont4">내용보기</a>
+                    <label><input type="checkbox" name="yaok2" id="privacy3" value="agree_uidD" class="input-cbox every_agree" /> 개인정보 처리위탁</label> <a href="#chk_cont4">내용보기</a>
                 </li>
                     </ul>
                     <div class="marketing pb-10">

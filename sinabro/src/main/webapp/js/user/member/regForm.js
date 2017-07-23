@@ -164,4 +164,9 @@ function passCheck(){
 function idCheck(){
 	window.open("/sinabro/check.do?this.regForm.id.value","post","width=300,height=300");
 }
+function checkedAll(){ 
+	$("input[name=yaok2]").attr("checked",$("input[name=every_agree]").is(":checked"));
+	}
+
+	
 

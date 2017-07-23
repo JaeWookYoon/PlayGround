@@ -14,7 +14,7 @@
 <c:if test="${sessionScope.loginId eq null}">
 <ul id="topMenu">
 <li><a href="/sinabro/loginForm.do"/> LOGIN</li>
-<li><a href="/sinabro/regForm.do"/> JOIN</li>
+<li><a href="/sinabro/policy.do"/> JOIN</li>
 <li><a href="#"/>CART</li>
 <li><a href="#"/>MY ORDER</li>
 </ul>

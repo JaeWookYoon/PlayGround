@@ -30,7 +30,10 @@ public class AddController {
 	public void setAddMemberService(AddMemberService addMemberService) {
 		this.addMemberService = addMemberService;
 	}
-
+	@RequestMapping(value="policy.do")
+	public String getPolicy() {
+		return "member/policyForm";
+	}
 
 	@RequestMapping(value="/regForm.do")
 	public String getRegForm() {
