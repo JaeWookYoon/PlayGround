@@ -166,11 +166,35 @@ function idCheck(){
 }
 function checkedAll(){ 
 	if($("input[name=every_agree]").is(":checked")){
-		$(".input-cbox every_agree").attr("checked","checked");
+		$(".input-cbox_every_agree").attr("checked","checked");
+		$("#iyong").attr("value","y");
+		$("#inform").attr("value","y");
+		$("#privacy").attr("value","y");
 	}else{
-		//$(".input-cbox every_agree").attr("checked","unchecked");	
+		$(".input-cbox_every_agree").attr("checked",null);	
 	}
 	}
-
+function checkiyong(){
+	$("#iyong").val="y";
+}
+function checkinform(){
+	$("#inform").val="y";
+}
+function checkprivacy(){
+	$("#privacy").val="y";
+}
+function checkDong(){
+	if($("#iyong").val()=="n"){
+		alert("약관 동의를 눌러주세요.");
+		return;
+	}if($("#inform").val()=="n"){
+		alert("약관 동의를 눌러주세요.");
+		return;
+	}if($("#privacy").val()=="n"){
+		alert("약관 동의를 눌러주세요.");
+		return;
+	}
+	window.location="regForm.do";
+}
 	
 

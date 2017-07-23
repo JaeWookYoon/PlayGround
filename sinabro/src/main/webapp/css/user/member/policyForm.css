@@ -88,3 +88,7 @@ p{
 	border-radius: 3px;
 	
 }
+.cont p10 ul li{
+	display:inline;
+	list-style: none;
+}

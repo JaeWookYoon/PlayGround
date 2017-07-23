@@ -517,21 +517,24 @@ TRUSTSEOUL (이하 “회사”라 함)는 정보통신망이용촉진및정보�
             <div id="chkwrap">
                 
                 <div class="all-chk">
-                    <label><input type="checkbox" name="every_agree" id="every_agree" class="input-cbox new_every_agree" onclick="checkedAll()" /> 전체동의</label>
+                    <label><input type="checkbox" name="every_agree" id="every_agree" class="input-cbox new_every_agree" onchange="checkedAll()" /> 전체동의</label>
                     <input type="hidden" name="allnew_agree" id="allnew_agree" value="Y">
                 </div>
                 
                 <div class="cont p10">
                     <ul>
                         <li class="ml-30 pt-10">
-                            <label><input type="checkbox" name="yaok2" id="yaok2" class="input-cbox every_agree"/> 이용약관</label> <a href="#chk_cont1">내용보기</a>
+                            <label><input type="checkbox" name="yaok2" id="yaok2" class="input-cbox_every_agree" onclick="checkiyong()"/> 이용약관</label> <a href="#chk_cont1">내용보기</a>
+                            <input type="hidden" name="iyong" id="iyong" value="n"/>
                         </li>
-                                        <li class="ml-30 pt-10">
-                    <label><input type="checkbox" name="yaok2" id="privacy1" class="input-cbox every_agree" /> 개인정보 수집 및 이용 안내</label> <a href="#chk_cont2">내용보기</a>
+                        <li class="ml-30 pt-10">
+                    <label><input type="checkbox" name="yaok2" id="privacy1" class="input-cbox_every_agree" onclick="checkinform()" /> 개인정보 수집 및 이용 안내</label> <a href="#chk_cont2">내용보기</a>
+                    		<input type="hidden" name="inform" id="inform" value="n"/>
                 </li>
                         
-                                        <li class="ml-30 pt-10">
-                    <label><input type="checkbox" name="yaok2" id="privacy3"  class="input-cbox every_agree" /> 개인정보 처리위탁</label> <a href="#chk_cont4">내용보기</a>
+                       <li class="ml-30 pt-10">
+                    <label><input type="checkbox" name="yaok2" id="privacy3"  class="input-cbox_every_agree" onclick="checkprivacy()" /> 개인정보 처리위탁</label> <a href="#chk_cont4">내용보기</a>
+                    		<input type="hidden" name="privacy" id="privacy" value="n"/>
                 </li>
                     </ul>
                     <div class="marketing pb-10">
@@ -549,7 +552,7 @@ TRUSTSEOUL (이하 “회사”라 함)는 정보통신망이용촉진및정보�
 				<table>
 					<tr>
 						<td colspan="2"><input id="agree" type="button" value="동의합니다"
-							onclick="javascript:window.location='regForm.do'" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input id="cancel" type="reset"
+							onclick="checkDong()" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input id="cancel" type="reset"
 							value="취소" /></td>
 					</tr>
 				</table>
