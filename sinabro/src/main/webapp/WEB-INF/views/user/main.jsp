@@ -5,28 +5,34 @@
 <html>
 <head>
 <body>
+<div id="wrapper">
 <div id="headerLogo">
 <a href="/sinabro/hi.do">SinaBro</a><br/>
 <label>Will steal ur wallet, hommy</label>
 </div>
 <br/>
-<div id="topMenu">
+<div id="topMenuwrap">
 <c:if test="${sessionScope.loginId eq null}">
+
 <ul id="topMenu">
 <li><a href="/sinabro/loginForm.do"/> LOGIN</li>
 <li><a href="/sinabro/policy.do"/> JOIN</li>
-<li><a href="#"/>CART</li>
-<li><a href="#"/>MY ORDER</li>
+<li><a href="/sinabro/list.do"/>Board</li>
+<li><a href="#"/>SHOP</li>
 </ul>
+
 </c:if>
 <c:if test="${sessionScope.loginId ne null}">
+
 <ul id="topMenu">
 <li><a href="#"/>${sessionScope.loginName}</li>
 <li>${sessionScope.point}</li>
 <li><a href="/sinabro/logout.do"/>LOG OUT</li>
 <li><a href="#"/>MY ORDER</li>
 </ul>
+
 </c:if>
+</div>
 </div>
 </body>
 </head>

@@ -6,17 +6,16 @@
 <link rel="stylesheet" href="/sinabro/css/user/member/policyForm.css">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <script src="/sinabro/js/jquery-3.2.1.min.js"></script>
-<script src="sinabro/js/user/member/regForm.js"></script>
+<script src="/sinabro/js/user/member/regForm.js"></script>
 <title>policyForm</title>
+<%@include file="/WEB-INF/views/user/main.jsp"%>
 </head>
+
 <body>
 
-<%@include file="/WEB-INF/views/user/main.jsp"%>
-
-<br><br>
-
-
+<div id="wrapper">
 	<div id="term1">
+<hr/>
 	
 	<p>  MEMBERSHIP POLICY</p>
 	</div>
@@ -518,28 +517,28 @@ TRUSTSEOUL (이하 “회사”라 함)는 정보통신망이용촉진및정보�
             <div id="chkwrap">
                 
                 <div class="all-chk">
-                    <label><input type="checkbox" name="every_agree" id="every_agree" value="all" class="input-cbox new_every_agree" onclick="checkedAll()" /> 전체동의</label>
+                    <label><input type="checkbox" name="every_agree" id="every_agree" class="input-cbox new_every_agree" onclick="checkedAll()" /> 전체동의</label>
                     <input type="hidden" name="allnew_agree" id="allnew_agree" value="Y">
                 </div>
                 
                 <div class="cont p10">
                     <ul>
                         <li class="ml-30 pt-10">
-                            <label><input type="checkbox" name="yaok2" id="yaok2" value="Y" class="input-cbox every_agree"/> 이용약관</label> <a href="#chk_cont1">내용보기</a>
+                            <label><input type="checkbox" name="yaok2" id="yaok2" class="input-cbox every_agree"/> 이용약관</label> <a href="#chk_cont1">내용보기</a>
                         </li>
                                         <li class="ml-30 pt-10">
-                    <label><input type="checkbox" name="yaok2" id="privacy1" value="agree_uidB" class="input-cbox every_agree" /> 개인정보 수집 및 이용 안내</label> <a href="#chk_cont2">내용보기</a>
+                    <label><input type="checkbox" name="yaok2" id="privacy1" class="input-cbox every_agree" /> 개인정보 수집 및 이용 안내</label> <a href="#chk_cont2">내용보기</a>
                 </li>
                         
                                         <li class="ml-30 pt-10">
-                    <label><input type="checkbox" name="yaok2" id="privacy3" value="agree_uidD" class="input-cbox every_agree" /> 개인정보 처리위탁</label> <a href="#chk_cont4">내용보기</a>
+                    <label><input type="checkbox" name="yaok2" id="privacy3"  class="input-cbox every_agree" /> 개인정보 처리위탁</label> <a href="#chk_cont4">내용보기</a>
                 </li>
                     </ul>
                     <div class="marketing pb-10">
                         <div class="mk-wrap">
                             <label class="mk-all"><input type="checkbox" name="ad_every_agree" id="ad_every_agree" value="ad_all" class="input-cbox every_agree new_every_agree" /> <strong>마케팅 수신동의</strong></label>&nbsp;
-                            ( <label><input type="checkbox" name="ADemail_" id="ADemail_" value="ADemail_" class="input-cbox every_agree ad_every_agree" /> 이메일</label>
-                                              <label class="pl-30"><input type="checkbox" name="ADsms_" id="ADsms_" value="ADsms_" class="input-cbox every_agree ad_every_agree" /> SMS</label>
+                            ( <label><input type="checkbox" name="ADemail_" id="ADemail_"  class="input-cbox every_agree ad_every_agree" /> 이메일</label>
+                                              <label class="pl-30"><input type="checkbox" name="ADsms_" id="ADsms_"  class="input-cbox every_agree ad_every_agree" /> SMS</label>
                               )
                         </div>
                         쇼핑몰에서 제공하는 신상품 소식/ 할인쿠폰을 무상으로 보내드립니다!<br />
@@ -560,7 +559,7 @@ TRUSTSEOUL (이하 “회사”라 함)는 정보통신망이용촉진및정보�
 
 </div>
 
-
+</div>
 
 </body>
 </html>
