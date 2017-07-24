@@ -19,7 +19,7 @@ public class DeleteArticleController {
 
 	@RequestMapping("deleteForm.do")
 	public ModelAndView setView(Integer num) {
-		ModelAndView mav = new ModelAndView("deleteForm");
+		ModelAndView mav = new ModelAndView("board/deleteForm");
 		mav.addObject("num", num);
 		return mav;
 	}
