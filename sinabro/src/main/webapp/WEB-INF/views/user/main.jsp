@@ -27,7 +27,9 @@
 <ul id="topMenu">
 <li><a href="#"/>${sessionScope.loginName}</li>
 <li>${sessionScope.point}</li>
+<li><a href="/sinabro/cart.do"/>Cart</li>
 <li><a href="/sinabro/logout.do"/>LOG OUT</li>
+
 <li><a href="#"/>MY ORDER</li>
 </ul>
 

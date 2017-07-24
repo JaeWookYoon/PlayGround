@@ -37,7 +37,7 @@ public class AddController {
 
 	@RequestMapping(value="/regForm.do")
 	public String getRegForm() {
-		return "member/regForm";
+		return "member/regForm"; 
 	}
 	
 	@RequestMapping(value="/join.do",method=RequestMethod.POST)

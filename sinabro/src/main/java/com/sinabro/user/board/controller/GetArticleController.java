@@ -12,7 +12,7 @@ import com.sinabro.user.board.service.GetArticleService;
 import com.sinabro.model.BoardVO;
 
 @Controller
-public class GetArticleController {
+public class GetArticleController {//기사불러오기
 	private GetArticleService getArticleService;
 
 	public void setGetArticleService(GetArticleService getArticleService) {
