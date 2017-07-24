@@ -16,7 +16,11 @@ public class UpdateArticleServiceImpl implements UpdateArticleService {
 		return this.boardDao.getArticle(num);
 	}
 
-	
+	@Override
+	public String getPass(Integer num) {
+		return this.boardDao.getPass(num);
+	}
+
 	@Override
 	public void updateArticle(BoardVO boardVo) {
 		this.boardDao.updateArticle(boardVo);

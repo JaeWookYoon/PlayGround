@@ -10,8 +10,11 @@ import com.sinabro.model.BoardVO;
 
 @Controller
 public class DeleteArticleController {
-
 	private DeleteArticleService deleteArticleService;
+
+	public DeleteArticleService getDeleteArticleService() {
+		return deleteArticleService;
+	}
 
 	public void setDeleteArticleService(DeleteArticleService deleteArticleService) {
 		this.deleteArticleService = deleteArticleService;
@@ -24,9 +27,9 @@ public class DeleteArticleController {
 		return mav;
 	}
 
-	@RequestMapping(value="deleteForm.do",method = RequestMethod.POST)
+	@RequestMapping(value = "deleteProc.do", method = RequestMethod.POST)
 	public ModelAndView onSubmit(Integer num, BoardVO boardVo) {
-		
+
 		return new ModelAndView();
 	}
 }

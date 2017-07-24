@@ -24,15 +24,14 @@ public class BoardDaoImpl implements BoardDao {
 	public List<BoardVO> getList(Object obj) {
 		Map<String, Object> map = new HashMap<String, Object>();
 		map = (Map<String, Object>) obj;
-		String search_text=(String)map.get("search_text");
 		if (map.get("search_type").equals("all")) {
 			return sqlSessionTemplate.selectList(namespace + "getAllList", obj);
 		} else if (map.get("search_type").equals("writer")) {
-			return sqlSessionTemplate.selectList(namespace + "getWriterList", search_text);
+			return sqlSessionTemplate.selectList(namespace + "getWriterList", obj);
 		} else if (map.get("search_type").equals("subject")) {
-			return sqlSessionTemplate.selectList(namespace + "getSubjectList", search_text);
+			return sqlSessionTemplate.selectList(namespace + "getSubjectList", obj);
 		} else if (map.get("search_type").equals("content")) {
-			return sqlSessionTemplate.selectList(namespace + "getContentList", search_text);
+			return sqlSessionTemplate.selectList(namespace + "getContentList", obj);
 		} else {
 			return sqlSessionTemplate.selectList(namespace + "getList", obj);
 		}
@@ -71,12 +70,16 @@ public class BoardDaoImpl implements BoardDao {
 		sqlSessionTemplate.update(namespace + "updateArticle", boardVo);
 	}
 
+	// 비밀번호 가져오기
+	@Override
+	public String getPass(Integer num) {
+		return sqlSessionTemplate.selectOne(namespace + "getPass", num);
+	}
+
 	// 글삭제
 	@Override
 	public void deleteArticle(Integer num) {
 		sqlSessionTemplate.delete(namespace + "deleteArticle", num);
 	}
-
-	
 
 }
