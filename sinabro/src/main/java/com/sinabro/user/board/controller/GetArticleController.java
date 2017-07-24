@@ -19,7 +19,7 @@ public class GetArticleController {//기사불러오기
 		this.getArticleService = getArticleService;
 	}
 	
-	@RequestMapping(value="content.do", method= RequestMethod.GET)
+	@RequestMapping(value="content.do", method= RequestMethod.GET)//content view
 	public ModelAndView getArticle(Integer num){
 		BoardVO boardVo = this.getArticleService.getArticle(num);
 		Map<String,Object> model = new HashMap<String,Object>();
