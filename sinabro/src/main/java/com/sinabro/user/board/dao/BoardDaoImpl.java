@@ -24,15 +24,15 @@ public class BoardDaoImpl implements BoardDao {
 	public List<BoardVO> getList(Object obj) {
 		Map<String, Object> map = new HashMap<String, Object>();
 		map = (Map<String, Object>) obj;
-		String writer=(String)map.get("search_text");
+		String search_text=(String)map.get("search_text");
 		if (map.get("search_type").equals("all")) {
 			return sqlSessionTemplate.selectList(namespace + "getAllList", obj);
 		} else if (map.get("search_type").equals("writer")) {
-			return sqlSessionTemplate.selectList(namespace + "getWriterList", obj);
+			return sqlSessionTemplate.selectList(namespace + "getWriterList", search_text);
 		} else if (map.get("search_type").equals("subject")) {
-			return sqlSessionTemplate.selectList(namespace + "getSubjectList", obj);
+			return sqlSessionTemplate.selectList(namespace + "getSubjectList", search_text);
 		} else if (map.get("search_type").equals("content")) {
-			return sqlSessionTemplate.selectList(namespace + "getContentList", obj);
+			return sqlSessionTemplate.selectList(namespace + "getContentList", search_text);
 		} else {
 			return sqlSessionTemplate.selectList(namespace + "getList", obj);
 		}
