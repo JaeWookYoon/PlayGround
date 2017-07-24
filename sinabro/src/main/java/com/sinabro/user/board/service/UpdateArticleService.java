@@ -6,7 +6,6 @@ public interface UpdateArticleService {
 
 	BoardVO getArticle(Integer num);
 
-	String getPass(Integer num);
 
 	void updateArticle(BoardVO boardVo);
 }

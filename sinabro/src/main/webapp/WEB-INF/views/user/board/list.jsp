@@ -26,6 +26,7 @@
 	}
 	window.onload = passCheck("${value}");
 </script>
+
 </head>
 <body>
 	<center>

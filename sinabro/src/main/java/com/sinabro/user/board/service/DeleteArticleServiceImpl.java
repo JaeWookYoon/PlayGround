@@ -10,11 +10,7 @@ public class DeleteArticleServiceImpl implements DeleteArticleService{
 		this.boardDao = boardDao;
 	}
 
-	@Override
-	public String getPass(Integer num) {
-		// TODO Auto-generated method stub
-		return this.boardDao.getPass(num);
-	}
+	
 
 	@Override
 	public void deleteArticle(Integer num) {

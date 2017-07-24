@@ -1,5 +1,7 @@
 package com.sinabro.user.board.controller;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -20,16 +22,10 @@ public class DeleteArticleController {
 		this.deleteArticleService = deleteArticleService;
 	}
 
-	@RequestMapping("deleteForm.do")
-	public ModelAndView setView(Integer num) {
-		ModelAndView mav = new ModelAndView("board/deleteForm");
-		mav.addObject("num", num);
-		return mav;
-	}
-
+	
 	@RequestMapping(value = "deleteProc.do", method = RequestMethod.POST)
-	public ModelAndView onSubmit(Integer num, BoardVO boardVo) {
-
+	public ModelAndView onSubmit(HttpServletRequest request) {
+		
 		return new ModelAndView();
 	}
 }
