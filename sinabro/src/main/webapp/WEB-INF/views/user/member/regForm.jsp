@@ -9,9 +9,9 @@
 <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
 <script src="/sinabro/js/jquery-3.2.1.min.js"></script>
 <script src="/sinabro/js/user/member/regForm.js"></script>
+	<%@include file="/WEB-INF/views/user/main.jsp"%>
 </head>
 <body>
-	<%@include file="/WEB-INF/views/user/main.jsp"%>
 <c:if test="${result==1}">
 <script type="text/javascript">
 alert("회원가입 실패하셨습니다.");
@@ -91,9 +91,9 @@ alert("회원가입 실패하셨습니다.");
 				<div id="joinCancelBt">
 				<table>
 					<tr>
-						<td colspan="2"><input id="join" type="submit" value="회원가입"/>
-							 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input id="cancel" type="reset"
-							value="취소" /></td>
+					<td colspan="2"><input id="join" type="submit" value="회원가입"/></td></tr>
+							
+					<tr><td><input id="cancel" type="reset" value="취소" /></td>
 					</tr>
 				</table>
 				</div>

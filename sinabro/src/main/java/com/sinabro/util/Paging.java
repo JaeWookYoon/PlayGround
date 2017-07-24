@@ -2,10 +2,10 @@ package com.sinabro.util;
 
 public class Paging {
 
-	private Integer w_size;// 페이지당 보여줄 글 수
-	private Integer p_size;// 페이지번호 표시수
-	private Integer writing_Count; // 전체 글 수
-	private Integer cur_Page; // 현재 페이지수
+	private Integer pageSize;// 페이지당 보여줄 글 수
+	private Integer pageBlock;// 페이지번호 표시수
+	private Integer count; // 전체 글 수
+	private Integer currentPage; // 현재 페이지수
 
 	public Paging() {
 		super();
@@ -15,10 +15,10 @@ public class Paging {
 	 * 페이징 (한 화면에 보여질 글 수, 페이지 분할 수, 총 글의 갯수, 현재 보고 있는 페이지 번호);
 	 */
 	public void setPaging(Integer w_size, Integer p_size, Integer writing_Count, Integer cur_Page) {
-		this.w_size = w_size;
-		this.p_size = p_size;
-		this.writing_Count = writing_Count;
-		this.cur_Page = cur_Page;
+		this.pageSize = w_size;
+		this.pageBlock = p_size;
+		this.count = writing_Count;
+		this.currentPage = cur_Page;
 	}
 
 	/*
@@ -29,7 +29,7 @@ public class Paging {
 	 */
 
 	public Integer getPage_Count() {
-		return (writing_Count / w_size) + (writing_Count % w_size > 0 ? 1 : 0);
+		return (count / pageSize) + (count % pageSize > 0 ? 1 : 0);
 	}
 
 	/*
@@ -39,7 +39,7 @@ public class Paging {
 	 */
 
 	public Integer getPage_Start() {
-		return ((cur_Page - 1) / p_size) * p_size + 1;
+		return ((currentPage - 1) / pageBlock) * pageBlock + 1;
 	}
 
 	/*
@@ -49,7 +49,7 @@ public class Paging {
 	 */
 
 	public Integer getPage_End() {
-		return Math.min(getPage_Start() + p_size - 1, getPage_Count());
+		return getPage_Start() + pageBlock - 1;
 	}
 
 	/*
@@ -59,7 +59,7 @@ public class Paging {
 	 */
 
 	public boolean isPre() {
-		return getPage_Start() != 1;
+		return getPage_Start() > pageBlock;
 	}
 
 	/*
@@ -79,7 +79,23 @@ public class Paging {
 	 */
 
 	public Integer getWriting_Start() {
-		return getWriting_End() - w_size + 1;
+		 return (currentPage - 1) * pageSize + 1;
+	}
+
+	public Integer getPageSize() {
+		return pageSize;
+	}
+
+	public Integer getPageBlock() {
+		return pageBlock;
+	}
+
+	public Integer getCount() {
+		return count;
+	}
+
+	public Integer getCurrentPage() {
+		return currentPage;
 	}
 
 	/*
@@ -88,39 +104,11 @@ public class Paging {
 	 * @return 글 범위 끝 번호
 	 */
 	public Integer getWriting_End() {
-		return cur_Page * w_size;
+		return currentPage * pageSize;
 	}
 
-	public Integer getW_size() {
-		return w_size;
-	}
+	
 
-	public void setW_size(Integer w_size) {
-		this.w_size = w_size;
-	}
-
-	public Integer getP_size() {
-		return p_size;
-	}
-
-	public void setP_size(Integer p_size) {
-		this.p_size = p_size;
-	}
-
-	public Integer getWriting_Count() {
-		return writing_Count;
-	}
-
-	public void setWriting_Count(Integer writing_Count) {
-		this.writing_Count = writing_Count;
-	}
-
-	public Integer getCur_Page() {
-		return cur_Page;
-	}
-
-	public void setCur_Page(Integer cur_Page) {
-		this.cur_Page = cur_Page;
-	}
+	
 
 }

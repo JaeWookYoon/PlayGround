@@ -16,7 +16,7 @@ public interface BoardDao {
 
 	void updateArticle(BoardVO boardVo); // 글 입력
 
-	String getPass(Integer num); // 비밀번호 가져오기
+	
 
 	void deleteArticle(Integer num); // 글 삭제
 }

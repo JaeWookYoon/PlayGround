@@ -24,8 +24,9 @@
 			alert("삭제되었습니다.");
 		}
 	}
-	wondow.onload = passCheck("${value}");
+	window.onload = passCheck("${value}");
 </script>
+
 </head>
 <body>
 	<center>

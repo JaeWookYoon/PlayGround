@@ -1,19 +1,25 @@
 package com.sinabro.model;
 
-import java.util.Date;
+import java.sql.Date;
 
 import org.springframework.stereotype.Component;
 @Component
 public class BoardVO {
 
 	private int num;
-	private String writer;
-	private String email;
-	private String subject;
-	private String pass;
+	private String id;	
+	private String subject;	
 	private int readcount;
 	private Date regdate;
 	private String content;
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
 
 	public int getNum() {
 		return num;
@@ -23,22 +29,8 @@ public class BoardVO {
 		this.num = num;
 	}
 
-	public String getWriter() {
-		return writer;
-	}
-
-	public void setWriter(String writer) {
-		this.writer = writer;
-	}
-
-	public String getEmail() {
-		return email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
-	}
-
+	
+	
 	public String getSubject() {
 		return subject;
 	}
@@ -47,14 +39,7 @@ public class BoardVO {
 		this.subject = subject;
 	}
 
-	public String getPass() {
-		return pass;
-	}
-
-	public void setPass(String pass) {
-		this.pass = pass;
-	}
-
+	
 	public int getReadcount() {
 		return readcount;
 	}
@@ -79,13 +64,7 @@ public class BoardVO {
 		this.content = content;
 	}
 
-	public String getArticle_type() {
-		return article_type;
-	}
+	
 
-	public void setArticle_type(String article_type) {
-		this.article_type = article_type;
-	}
-
-	private String article_type;
+	
 }

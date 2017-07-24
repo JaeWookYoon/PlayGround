@@ -1,7 +1,7 @@
 package com.sinabro.user.board.controller;
 
 import java.text.SimpleDateFormat;
-import java.util.Date;
+import java.sql.Date;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -29,11 +29,10 @@ public class WriteController {
    }
 
    @RequestMapping(value="writeForm.do",method = RequestMethod.POST)
-   public ModelAndView onSubmit(HttpServletRequest request, BoardVO boardVo, BindingResult bindingResult)throws Exception{
+   public ModelAndView onSubmit(HttpServletRequest request, BoardVO boardVo)throws Exception{
       // 글쓰기 DB에 저장
-      SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-      String date = sdf.format(new Date());
-      boardVo.setRegdate(new Date());
+      System.out.println("일단 왔어");
+      
       this.writeService.insertWriting(boardVo);
       return new ModelAndView("redirect:/list.do");
    }
