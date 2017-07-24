@@ -24,7 +24,7 @@ public class CheckController {
 		return "member/idcheck";
 	}
 
-	@RequestMapping(value = "idcheck.do", method = RequestMethod.POST)
+	@RequestMapping(value = "idcheck.do", method = RequestMethod.POST)//아이디 체크파트
 	public ModelAndView checkId(@RequestParam("id")String id) {
 		int count=0;
 		ModelAndView model=new ModelAndView();
