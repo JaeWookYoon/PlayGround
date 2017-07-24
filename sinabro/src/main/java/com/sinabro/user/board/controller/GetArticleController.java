@@ -12,14 +12,14 @@ import com.sinabro.user.board.service.GetArticleService;
 import com.sinabro.model.BoardVO;
 
 @Controller
-public class GetArticleController {
+public class GetArticleController {//기사불러오기
 	private GetArticleService getArticleService;
 
 	public void setGetArticleService(GetArticleService getArticleService) {
 		this.getArticleService = getArticleService;
 	}
 	
-	@RequestMapping(value="content.do", method= RequestMethod.GET)
+	@RequestMapping(value="content.do", method= RequestMethod.GET)//content view
 	public ModelAndView getArticle(Integer num){
 		BoardVO boardVo = this.getArticleService.getArticle(num);
 		Map<String,Object> model = new HashMap<String,Object>();
