@@ -26,18 +26,7 @@ public class DeleteArticleController {
 
 	@RequestMapping(value="deleteForm.do",method = RequestMethod.POST)
 	public ModelAndView onSubmit(Integer num, BoardVO boardVo) {
-		String dbpass = this.deleteArticleService.getPass(num);
-		if (boardVo.getPass().equals(dbpass)) {
-			this.deleteArticleService.deleteArticle(boardVo.getNum());
-			ModelAndView mav = new ModelAndView("deleteForm");
-			mav.addObject("num", num);
-			mav.addObject("value", "successDelete");
-			return mav;
-		} else {
-			ModelAndView mav = new ModelAndView("deleteForm");
-			mav.addObject("num", num);
-			mav.addObject("value", "passerror");
-			return mav;
-		}
+		
+		return new ModelAndView();
 	}
 }

@@ -4,6 +4,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
@@ -29,8 +30,16 @@ public class WriteController {
    }
 
    @RequestMapping(value="writeForm.do",method = RequestMethod.POST)
-   public ModelAndView onSubmit(HttpServletRequest request, BoardVO boardVo, BindingResult bindingResult)throws Exception{
+   public ModelAndView onSubmit(HttpServletRequest request, BoardVO boardVo)throws Exception{
       // 글쓰기 DB에 저장
+	   ModelAndView model=new ModelAndView();
+	   HttpSession session=request.getSession(false);
+	   if(session.getAttribute("loginId")==null||session.getAttribute("loginId").equals(null)) {
+		   model.addObject("notlog", 1);
+		   model.setViewName("redirect:hi.do");
+	   }
+	   String id=(String)session.getAttribute("loginId");
+	   
       SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
       String date = sdf.format(new Date());
       boardVo.setRegdate(new Date());
