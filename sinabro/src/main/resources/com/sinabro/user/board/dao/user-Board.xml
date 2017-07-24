@@ -50,7 +50,7 @@
 	</select>
 
 	<!-- List(목록보기) :검색(conetent) -->
-	<select id="getContentList" parameterType="java.util.Map"
+	<select id="getContentList" parameterType="java.util.String"
 		resultMap="BoardResult">
 		<![CDATA[
 		select * from (select rownum rnum, num, id, subject, content, regdate, readcount 
