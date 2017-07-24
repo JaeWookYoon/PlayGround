@@ -70,11 +70,7 @@ public class BoardDaoImpl implements BoardDao {
 		sqlSessionTemplate.update(namespace + "updateArticle", boardVo);
 	}
 
-	// 비밀번호 가져오기
-	@Override
-	public String getPass(Integer num) {
-		return sqlSessionTemplate.selectOne(namespace + "getPass", num);
-	}
+
 
 	// 글삭제
 	@Override
