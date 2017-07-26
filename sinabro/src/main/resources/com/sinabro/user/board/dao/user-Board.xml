@@ -112,4 +112,11 @@
 		delete from BOARD where num =#{num}
 		]]>
 	</delete>	
+	
+	<select id="getComment" parameterType="java.lang.Integer" resultMap="com.sinabro.model.CommentVO">
+	select * from DATGUL where NUM=#{num}
+	</select>
+	<insert id="insertComment" parameterType="com.sinabro.model.CommentVO">
+	insert into DATGUL values(DATGUL_SEQ.nextval,#{id},#{num},#{content})
+	</insert>
 </mapper>

@@ -24,9 +24,12 @@
 
 <ul id="topMenu">
 <li><a href="#">${sessionScope.loginName}</a></li>
-<li>${sessionScope.point}</li>
+<li>Point : ${sessionScope.point}</li>
 <li><a href="/sinabro/logout.do">LOG OUT</a></li>
+<li><a href="/sinabro/list.do">Board</a></li>
 <li><a href="#">MY ORDER</a></li>
+<li><a href="#">SHOP</a></li>
+
 </ul>
 
 </c:if>

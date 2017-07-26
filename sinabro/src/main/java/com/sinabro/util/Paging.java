@@ -14,11 +14,11 @@ public class Paging {
 	/*
 	 * 페이징 (한 화면에 보여질 글 수, 페이지 분할 수, 총 글의 갯수, 현재 보고 있는 페이지 번호);
 	 */
-	public void setPaging(Integer w_size, Integer p_size, Integer writing_Count, Integer cur_Page) {
-		this.pageSize = w_size;
-		this.pageBlock = p_size;
-		this.count = writing_Count;
-		this.currentPage = cur_Page;
+	public void setPaging(int pageSize, int pageBlock, int count, int currentPage) {
+		this.pageSize = pageSize;
+		this.pageBlock = pageBlock;
+		this.count = count;
+		this.currentPage = currentPage;
 	}
 
 	/*

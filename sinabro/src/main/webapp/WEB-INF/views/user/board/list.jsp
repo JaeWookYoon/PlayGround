@@ -29,6 +29,12 @@
 
 </head>
 <body>
+<c:if test="${check == false}">
+<script type="text/javascript">
+alert("글 작성 권한이 없습니다.(로그인 후 시도하세요.)")
+window.location="loginForm.do";
+</script>
+</c:if>
 	<center>
 		<h3>게시판</h3>
 		<table width="700">
@@ -56,11 +62,11 @@
 				<tr>
 					<td align="center">${number }<c:set var="number" value="${number-1 }" scope="page"/></td>
 					<td align="left">
-					<a href="content.do?num=${vo.num }&pageNum=${bp.cur_Page}">&nbsp;${vo.subject }</a>
+					<a href="content.do?num=${vo.num }&pageNum=${bp.currentPage}">&nbsp;${vo.subject }</a>
 					<c:if test="${vo.readcount > 10}">
 					</c:if></td>
 					<td align="center">
-						<a href="mailto:${vo.email }">${vo.writer }</a></td>
+						<b>${vo.id }</b></td>
 					<td align="center">${vo.regdate }</td>
 					<td align="center">${vo.readcount }</td>
 				</tr>

@@ -15,10 +15,7 @@
 <form method="post" name="writeForm" action="writeForm.do" enctype="multipart.form-data" onsubmit="return writeCheck()">
 글쓰기
 <table width=450 border=1>
-<tr>
-   <td align="center">작성자</td>
-   <td align="left"><input type="text" name="id"/></td>
-</tr>
+<input type="hidden" name="id" value="${sessionScope.loginId}"/>
 
 <tr>
    <td align="center">제목</td>
