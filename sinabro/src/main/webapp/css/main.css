@@ -1,22 +1,16 @@
 @CHARSET "UTF-8";
 
-#wrapper {
-	
-	border-style:solid;
-	border-color:red;
+body {
 	color: black;
 	margin-left:20%;
 	margin-right:20%;
 	position:relative;
 	clear:both;
-	display: marker;
 	}
 
 a {text-decoration: none;}
 
 #headerLogo{
-	border-style:solid;
-	
 	text-align: center;
 	margin-top: 50px;
 	font-size: 15px;
@@ -30,12 +24,11 @@ a {text-decoration: none;}
 }
 
 #topMenuwrap {
-	border-style:solid;
-	border-color:blue;
 	float:right; 
+	margin:0;
 }
 
-topMenuwrap ul {
+#topMenuwrap ul {
 	list-style: none;
 }
 
@@ -49,11 +42,4 @@ topMenuwrap ul {
 #topMenuwrap ul li a {
 	color: black;
 	text-decoration: none;
-}
-#topMenu{
-	border-style:solid;
-}
-
-.brand {
-	
 }

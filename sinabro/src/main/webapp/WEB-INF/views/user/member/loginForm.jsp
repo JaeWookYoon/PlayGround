@@ -13,32 +13,37 @@
 </head>
 <body>
 	<div id="wrap">
-		<div id="logForm">
-		<form name="loginForm" method="post" action="login.do" onsubmit="return loginCheck()">
-			<table id="table1">
-				<tr>
-					<td>I.D</td>
-					<td><input type="text" name="id" id="id" /></td>
-					<td rowspan="2"><input type="submit" value="L O G I N" id="bt"/></td>
-						
-				</tr>
-				<tr>
-					<td>P.W</td>
-					<td><input type="password" name="password" id="password" /></td>
-				</tr>
-			</table>
+		<p>로그인</p>
+		<hr>
+		<div id="logTotalForm">
+			<form id="form" method="post" action="login.do" onsubmit="return loginCheck()">
+				<table id="logForm">
+					<tr>
+						<th>I.D</th>
+						<td><input type="text" name="id" id="id" /></td>
+						<td rowspan="2"><input type="submit" value="L O G I N"
+							id="bt" /></td>
+					</tr>
+					<tr>
+						<th>P.W</th>
+						<td><input type="password" name="password" id="password" /></td>
+					</tr>
+				</table>
 			</form>
 		</div>
-
 		<div id="findForm">
-			<table id="table2">
-				<tr>
-					<td id="join1"><a href="/sinabro/policy.do">JOIN MEMBERSHIP</a></td>
-					<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-					<td id="join2"><a href="#" >FINDING ID/PW</a></td>
-				</tr>
-			</table>
+			<form>
+				<table id="table2">
+					<tr>
+						<td id="join1"><a href="/sinabro/policy.do">JOIN
+								MEMBERSHIP</a></td>
+						<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+						<td id="join2"><a href="#">FINDING ID/PW</a></td>
+					</tr>
+				</table>
+			</form>
 		</div>
+		<hr>
 	</div>
 
 </body>

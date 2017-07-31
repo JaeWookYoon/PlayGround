@@ -9,19 +9,15 @@
 <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
 <script src="/sinabro/js/jquery-3.2.1.min.js"></script>
 <script src="/sinabro/js/user/member/regForm.js"></script>
-	<%@include file="/WEB-INF/views/user/main.jsp"%>
 </head>
 <body>
-<c:if test="${result==1}">
-<script type="text/javascript">
-alert("회원가입 실패하셨습니다.");
-</script>
-</c:if>
+	<%@include file="/WEB-INF/views/user/main.jsp"%>
+
 	<div id="wrap">
 		<p>회원정보입력</p>
 		<hr>
 			<div id="regTotalForm">
-		<form name="regForm" method="post" onsubmit="return checkInput()" action="join.do">
+		<form id="regForm" name="regForm" method="post" action="join.do" onsubmit="return checkInput()">
 				<table id="Form">
 					<tr>
 						<th>이름</th>
@@ -34,7 +30,7 @@ alert("회원가입 실패하셨습니다.");
 					</tr>
 					<tr>
 						<th>비밀번호</th>
-						<td><input id="password" type="password" name="password" onkeypress="passCheck()"/><b id="passSecure">보안정도: 하</b></td>
+						<td><input id="password" type="password" name="password" onkeydown="passCheck()"/><b id="passSecure">보안정도: 하</b></td>
 					</tr>
 					<tr>
 						<th>비밀번호 확인</th>
@@ -42,12 +38,12 @@ alert("회원가입 실패하셨습니다.");
 					</tr>
 					<tr>
 						<th>우편번호</th>
-						<td><input id="zipcode" type="text" name="zipcode"/>&nbsp;<input id="zipBt"
+						<td><input id="zipcode" type="text" name="zipcode" />&nbsp;<input id="zipBt"
 							type="button" onclick="getPost()" value="우편번호검색" /></td>
 					</tr>
 					<tr>
 						<th>주소</th>
-						<td><input id="address1" type="text" name="address1"/></td>
+						<td><input id="address1" type="text" name="address1" /></td>
 					</tr>
 					<tr>
 						<th>상세주소</th>
@@ -73,17 +69,16 @@ alert("회원가입 실패하셨습니다.");
 								<option value="054">054</option>
 								<option value="055">055</option>
 								<option value="064">064</option>
-								<option value="010">010</option>
 						</select> <input id="phone1" type="text" name="phone1" /> - <input id="phone2"
 							type="text" name="phone2" /></td>
 					</tr>
 					<tr>
 						<th>이메일</th>
-						<td><input id="email" type="text" name="email" />@<select name="emailaddress" id="emailaddress">
+						<td><input id="email" type="text" name="email" />@<select id="emailaddress" name="emailaddress">
 						<option value="naver.com">naver.com</option>
-						<option value="hanmail.net">hanmail.net</option>
-						<option value="nate.com">nate.com</option>
+						<option value="daum.net">daum.net</option>
 						<option value="gmail.com">gmail.com</option>
+						<option value="nate.com">nate.com</option>
 						</select></td>
 
 					</tr>
@@ -91,16 +86,17 @@ alert("회원가입 실패하셨습니다.");
 				<div id="joinCancelBt">
 				<table>
 					<tr>
-					<td colspan="2"><input id="join" type="submit" value="회원가입"/></td></tr>
-							
-					<tr><td><input id="cancel" type="reset" value="취소" /></td>
+						<td colspan="2">
+						<input id="join" type="submit" value="JOIN"/>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<input id="cancel" type="reset" value="CANCEL" /></td>
 					</tr>
 				</table>
 				</div>
-				<input type="hidden" name="check" value="n" />
-	<hr>
 		</form>
 			</div>
+				<input type="hidden" name="check" value="n" />
+	<hr>
 	</div>
 </body>
 </html>

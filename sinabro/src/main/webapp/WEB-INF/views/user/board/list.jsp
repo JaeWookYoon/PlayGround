@@ -24,14 +24,13 @@
 			alert("삭제되었습니다.");
 		}
 	}
-	window.onload = passCheck("${value}");
+	wondow.onload = passCheck("${value}");
 </script>
-
 </head>
 <body>
-<c:if test="${check == false}">
-<script type="text/javascript">
-alert("글 작성 권한이 없습니다.(로그인 후 시도하세요.)")
+<c:if test="${check == false }">
+<script>
+alert("글쓰기 권한이 없습니다.");
 window.location="loginForm.do";
 </script>
 </c:if>

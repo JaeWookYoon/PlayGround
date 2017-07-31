@@ -10,8 +10,8 @@
 </head>
 <body>
 
-<form name="checkForm" action="idcheck.do" method="post" onsubmit="idcheck()">
-<input type="text" name="id" id="id" value="${id}"/><input type="submit" value="중복확인" onclick="idcheck()"/>
+<form name="checkForm" action="idcheck.do" method="post" onsubmit="return idcheck()">
+<input type="text" name="id" id="id" value="${id}"/><input type="submit" value="중복확인"/>
 <p id="result"></p>
 <div id="pos">
 <c:if test="${check==0 }">

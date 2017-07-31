@@ -4,7 +4,7 @@
 <html>
 <head>
 <link rel="stylesheet" href="/sinabro/css/user/member/policyForm.css">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <script src="/sinabro/js/jquery-3.2.1.min.js"></script>
 <script src="/sinabro/js/user/member/regForm.js"></script>
 <title>policyForm</title>
@@ -20,7 +20,7 @@
 	<p>  MEMBERSHIP POLICY</p>
 	</div>
 	<div id="term3">
-	<textarea readonly="readonly">
+	<textarea>
 	핑몰 『 누리보듬(주) 사이버 몰』회원 약관
 
 제1조(목적)
@@ -369,7 +369,7 @@
 <p>PRIVACY POLICY</p>
 </div>
 <div id="term2">
-<textarea readonly="readonly">
+<textarea >
 [개인정보처리방침] 
 
 TRUSTSEOUL (이하 “회사”라 함)는 정보통신망이용촉진및정보보호등에관한법률, 개인정보보호법 등 개인정보와 관련된 법령상의 규정들을 준수하고 있으며, 개인정보처리방침을 제정하여 이용자의 권익보호에 최선을 다하고 있습니다. 회사는 개인정보처리방침을 통하여 이용자의 개인정보가 어떠한 용도와 방식으로 이용되고 있으며, 개인정보보호를 위해 회사가 어떠한 조치를 취하는지 알려드립니다. 회사는 개인정보처리방침을 개정하는 경우 웹사이트 공지사항(또는 개별공지)을 통하여 공지할 것입니다.

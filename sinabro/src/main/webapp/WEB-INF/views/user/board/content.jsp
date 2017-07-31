@@ -15,7 +15,7 @@
 	function makeCommentView(){}
 </script>
  -->
-<%@include file="/WEB-INF/views/user/main.jsp"%>
+
 </head>
 <body>
 	<div align="center" class="body">
@@ -33,11 +33,14 @@
 				</tr>
 				<tr>
 					<td align="center">작성자</td>
-					<td align="left">${vo.id}</td>
+					<td align="left">${vo.writer}</td>
 					<td align="center">조회수</td>
 					<td align="left">${vo.readcount}</td>
 				</tr>
-				
+				<tr>
+					<td align="center">이메일</td>
+					<td colspan="7" align="left">${vo.email}</td>
+				</tr>
 				<tr>
 					<td align="center">제목</td>
 					<td colspan="7" align="left">${vo.subject}</td>
@@ -47,12 +50,11 @@
 					<td colspan="7" align="left" height="100"><pre>${vo.content}</pre></td>
 				</tr>
 			</table>
-			<br /> 
-			<c:if test="${vo.id eq sessionScope.loginId}">
-			<input type="button" value="글수정" onclick="window.location='updateForm.do?num=${vo.num}'" /> 
-			<input type="button" value="글삭제" onclick="" />
-			</c:if> 
-			<input type="button" value="목록보기" onclick="window.location='list.do'" />
+			<br /> <input type="button" value="글수정"
+				onclick="window.location='updateForm.do?num=${vo.num}'" /> <input
+				type="button" value="글삭제"
+				onclick="window.location='deleteForm.do?num=${vo.num}'" /> <input
+				type="button" value="목록보기" onclick="window.location='list.do'" />
 		</center>
 	</div>
 	<!-- 댓글 입력 폼 -->

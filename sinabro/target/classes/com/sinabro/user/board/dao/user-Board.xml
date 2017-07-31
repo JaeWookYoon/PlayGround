@@ -12,6 +12,12 @@
 		<result property="regdate" column="REGDATE" jdbcType="TIMESTAMP" />
 		<result property="content" column="CONTENT" jdbcType="VARCHAR" />
 	</resultMap>
+	<resultMap type="com.sinabro.model.CommentVO" id="commentResult">
+	<result property="dnum" column="DNUM" jdbcType="INTEGER"/>
+	<result property="id" column="ID" jdbcType="VARCHAR"/>
+	<result property="num" column="NUM" jdbcType="INTEGER"/>
+	<result property="content" column="CONTENT" jdbcType="VARCHAR"/>
+	</resultMap>
 
 	<!-- 전체 글 수 : 검색(All) -->
 	<select id="getAllCount" parameterType="java.util.Map" resultType="Integer">
@@ -113,7 +119,7 @@
 		]]>
 	</delete>	
 	
-	<select id="getComment" parameterType="java.lang.Integer" resultMap="com.sinabro.model.CommentVO">
+	<select id="getComment" parameterType="java.lang.Integer" resultMap="commentResult">
 	select * from DATGUL where NUM=#{num}
 	</select>
 	<insert id="insertComment" parameterType="com.sinabro.model.CommentVO">

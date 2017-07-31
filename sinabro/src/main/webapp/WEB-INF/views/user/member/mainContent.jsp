@@ -1,20 +1,16 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%><%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Sinabro</title>
+<title>Insert title here</title>
 </head>
 <!-- CSS file -->
 <link rel="stylesheet" href="/sinabro/css/user/main/mainContent.css" />
-<%@include file="/WEB-INF/views/user/main.jsp"%>
 <body>
-<c:if test="${result==1}">
-<script type="text/javascript">
-alert("회원가입하셨습니다.");
-</script>
-</c:if>
+<%@include file="/WEB-INF/views/user/main.jsp"%>
+<%@include file="/WEB-INF/views/user/member/mainCategoriesForm.jsp"%>
 <div class="sp-slideshow">
 	<input id="button-1" type="radio" name="radio-set" class="sp-selector-1" checked="checked" />			
 	<label for="button-1" class="button-label-1"></label>
@@ -44,15 +40,18 @@ alert("회원가입하셨습니다.");
 	</div><!-- sp-content -->
 </div><!-- sp-slideshow -->
 
+
+
 <!-- 메인 상품리스트 -->
 <div id="tableName">
 <br/>
 <div id="leftTableName"><a href="#"></a>LATEST</div>
 <div id="rightTableName"><a href="#"></a>BEST</div>
-<br/><br/><hr>
+<br/><br/>
 </div>
-
 <div id="productsList">
+<hr>
+<div id="table">
 <table id="mainProductsList" >
 <tr>
 <td><a href="#"><img id="mainProducts" src="/sinabro/images/1.jpg"></a></td>
@@ -84,8 +83,9 @@ alert("회원가입하셨습니다.");
 </tr>
 </table>
 </div>
-
 <hr/>
+</div>
+
 
 <%@include file="/WEB-INF/views/user/footer.jsp"%>
 

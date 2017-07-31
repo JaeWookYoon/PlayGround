@@ -2,62 +2,69 @@
 
 #wrap {
 	clear: both;
-	margin-right: auto;
-	margin-left: auto;;
-	padding-top: 15%;
-	padding-bottom: 20%;
+	/* 	margin-right: 20%; */
+	/* 	margin-left: 20%;; */
+	margin-right: auto; 
+	margin-left: auto;
+	padding-top: 100px;
+	padding-bottom: 150px;
 	font-family: Calibri;
-	position:relative;
+	position : relative;
 }
-p{
-	color:#000000;
-	font-weight:bold;
+
+p {
+	color: #000000;
+	font-weight: bold;
 }
+
 hr {
 	height: 0.1px;
-	color: #A6A6A6;
+	background: #5D5D5D;
 }
 
 th {
 	font-size: 13px;
 	color: #5D5D5D;
-	font-weight:bold;
+	text-align: left;
 }
 
 #logTotalForm {
-	padding-top: 4%;
+	padding-top: 10%;
 	padding-bottom: 4%;
-	float:center;
-	margin-left: auto;
-	margin-right: auto;	
+	float: center;
+	/* 	margin-left: auto; */
+	/* 	margin-right: auto;	 */
 }
 
 #logForm {
-	margin : auto
+	margin: auto
 }
 
 #id {
-	width: 87%;
+	width: 150px;
+	color: #BDBDBD;
 }
 
 #password {
-	width: 87%;
+	width: 150px;
+	color: #BDBDBD;
 }
 
 #bt {
 	border-radius: 1px;
 	border: none;
-	width: 128%;
-	height:47px;
+	width: 70px;
+	height: 47px;
 	text-align: center;
-	background-color: #A6A6A6;
+	background-color: #BDBDBD;
 	float: right;
-	font-size: 13px;
-	color: #ffffff;
+	font-size: 10px;
+	color: #5D5D5D;
 }
 
-a {
-	text-decoration: none;
+#join1 a, #join2 a {
+	font-size: 8pt;
+	color: #5D5D5D;
 }
 
 #findForm {
@@ -70,11 +77,11 @@ a {
 	margin-right: auto;
 }
 
-#join1, #join2 {
-	background-color:#A6A6A6;
-	color:#ffffff;
-	font-size:11px;
+#join1 {
+	background-color: #BDBDBD;
 }
-a{
-	color:#ffffff;
+
+#join2 {
+	background-color: #BDBDBD;
+	color: #5D5D5D;
 }

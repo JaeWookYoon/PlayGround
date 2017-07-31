@@ -37,12 +37,12 @@ public class AddController {
 
 	@RequestMapping(value="/regForm.do")
 	public String getRegForm() {
-		return "member/regForm";
+		return "member/regForm"; 
 	}
 	
 	@RequestMapping(value="/join.do",method=RequestMethod.POST)
 	public ModelAndView addUser(HttpServletRequest request,MemberVO vo) {
-		RedirectAttributes att=new RedirectAttributesModelMap();
+		
 		
 			
 			

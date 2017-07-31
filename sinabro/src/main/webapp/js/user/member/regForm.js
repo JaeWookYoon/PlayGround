@@ -98,6 +98,23 @@ if(name==""){
 	alert("메일을 입력하세요.");
 	return false;
 }
+var numco=0;
+for(var i=0;i<email.length;i++){
+	if((email.charAt(i)>='a'&&email.charAt(i)<='z')||(email.charAt(i)>='A'&&email.charAt(i)<='Z')||(email.charAt(i)>='0'&&email.charAt(i)<='9')){
+		
+	}else{
+		numco++;
+	}
+	if(email.charAt(i)=='@'){
+		
+	}else{
+		numco++;
+	}
+}
+if(numco>0){
+	alert("email형식에 맞지 않습니다.");
+	return false;
+}
 /*$.ajax({
 	url:"join.do",
 	type: "POST",
@@ -157,6 +174,8 @@ function passCheck(){
 				if(count>0){
 					$("#passSecure").html("보안정도: 상");
 				}
+			}else{
+				$("#passSecure").html("보안정도: 하");
 			}
 			
 }	
